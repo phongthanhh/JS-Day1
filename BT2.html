@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum = 0;
+        let count = 0;
+        for (let i = 1; i < 6; i++) {
+            let getNum = parseInt(prompt(`Nhập vào số thứ ${i} :`))
+            if (getNum) {
+                // Trường hợp này mình làm thêm. để nếu chỉ nhập vào ...,3,4 số thì vẫn tính được chính xác
+                count += 1;
+            } else {
+                getNum = 0;
+            }
+            sum += getNum;
+        }
+        let TB = sum / count;
+        alert('Trung bình: ' + TB);
+    </script>
+</body>
+
+</html>
